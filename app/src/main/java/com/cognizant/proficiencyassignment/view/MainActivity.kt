@@ -1,4 +1,4 @@
-package com.cognizant.proficiencyassignment.activity
+package com.cognizant.proficiencyassignment.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
