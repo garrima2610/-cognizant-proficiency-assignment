@@ -6,6 +6,9 @@ import com.cognizant.proficiencyassignment.R
 import com.cognizant.proficiencyassignment.viewmodel.CountryViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
+/**
+ * Displaying country list fragment
+ */
 class MainActivity : AppCompatActivity() {
 
     private val productListModel: CountryViewModel by viewModel()

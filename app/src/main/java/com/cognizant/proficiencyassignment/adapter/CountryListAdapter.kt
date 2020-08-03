@@ -11,6 +11,9 @@ import com.bumptech.glide.Glide
 import com.cognizant.proficiencyassignment.R
 import com.cognizant.proficiencyassignment.model.Rows
 
+/**
+ * Binding data to recyclerview
+ */
 class CountryListAdapter(
     private val productList: List<Rows>,
     context: Context?
@@ -25,6 +28,9 @@ class CountryListAdapter(
         }
     }
 
+    /**
+     * inflate list item view design created
+     */
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val v =
             LayoutInflater.from(p0?.context).inflate(R.layout.item_recycler_country_list, p0, false)
@@ -35,6 +41,9 @@ class CountryListAdapter(
         return productList.size
     }
 
+    /**
+     * binding data to views
+     */
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
         if (productList[position].title != null) {

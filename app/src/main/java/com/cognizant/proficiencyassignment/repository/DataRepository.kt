@@ -5,8 +5,14 @@ import com.cognizant.proficiencyassignment.network.NetworkApi
 import retrofit2.Call
 import retrofit2.Response
 
+/**
+ * Fetching data from API using Retrofit
+ */
 class DataRepository(val networkApi: NetworkApi) {
 
+    /**
+     * Fetching list of facts about Country from API
+     */
     fun getProducts(onList: OnListData) {
         networkApi.getList().enqueue(object : retrofit2.Callback<BaseModel> {
             override fun onResponse(call: Call<BaseModel>, response: Response<BaseModel>) {

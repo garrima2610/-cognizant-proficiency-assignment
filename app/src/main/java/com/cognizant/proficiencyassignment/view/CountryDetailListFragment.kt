@@ -16,6 +16,9 @@ import com.cognizant.proficiencyassignment.model.BaseModel
 import com.cognizant.proficiencyassignment.viewmodel.CountryViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
+/**
+ * Binding data to Views with which user interacts
+ */
 class CountryDetailListFragment : Fragment() {
     private val productListModel: CountryViewModel by viewModel()
     private lateinit var progressBar: ProgressBar
@@ -31,11 +34,17 @@ class CountryDetailListFragment : Fragment() {
         getCountryList()
     }
 
+    /**
+     * initializing views
+     */
     private fun initViews(){
         progressBar = view?.findViewById(R.id.progress_circular)!!
         recyclerView = view?.findViewById(R.id.recyclerView)!!
     }
 
+    /**
+     * getting list of country details from view model and setting it in recycler view adapter
+     */
     private fun getCountryList(){
         recyclerView!!.layoutManager = LinearLayoutManager(view!!.context, RecyclerView.VERTICAL, false)
         Utility.showProgressBar(progressBar)

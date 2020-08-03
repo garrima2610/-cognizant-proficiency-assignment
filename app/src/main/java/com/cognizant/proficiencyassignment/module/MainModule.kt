@@ -20,6 +20,9 @@ val mainModule = module {
 
 }
 
+/**
+ * Creating Retrofit client for retrieving data from server
+ */
 fun createWebService(): NetworkApi {
     val retrofit = Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
